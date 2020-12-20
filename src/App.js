@@ -1,22 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Score from './Components/Score';
+import Letters from './Components/Letters';
+import Letter from './Components/Letter';
+import Solution from './Components/Solution';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Score /><Solution />
+
+        <Letters><Letter></Letter><Letter></Letter>
+          .... //Eventually we will display all the available letters here: A - Z
+        </Letters>
       </header>
     </div>
   );
