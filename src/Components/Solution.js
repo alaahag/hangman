@@ -1,4 +1,4 @@
-//import Letter from "./Letter";
+import Letter from "./Letter";
 import React, { Component } from 'react';
 
 function displayUnderscores(){
@@ -8,16 +8,15 @@ function displayUnderscores(){
     }
     return underscore;
 }
-
 export default class Solution extends Component {
     render() {
         return(
             <div>
                 <div>
-                    {displayUnderscores().map(m => (<span>{m} </span>))}
+                    {Array.from(this.props.solution.word).map(m => (<Letter letter={this.props.letterStatus[m] === true? m : "_"} />))}
                 </div>
                 <div>
-                    <em>Your ideal mood when coding.</em>
+                    <em>{this.props.solution.hint}</em>
                 </div>
             </div>
         )

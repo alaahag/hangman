@@ -24,8 +24,16 @@
   color: white;
 }
 
+.strikeout_word {
+  text-decoration: line-through;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+span {
+  padding: 5px;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +43,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.high_score {
+  color: green;
+}
+
+.mid_score {
+  color: yellow;
+}
+
+.low_score {
+  color: red;
 }
